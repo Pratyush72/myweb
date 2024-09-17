@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete the Payment</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 90%;
+            width: 400px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #c82333;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        #rzp-button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        #rzp-button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+
+        #rzp-button:active {
+            background-color: #1e7e34;
+            transform: scale(1);
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+            #rzp-button {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+        }
+    </style>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Complete the Payment</h1>
+        <p>199</p>
+        <button id="rzp-button">Pay</button>
+    </div>
+    <script>
+        document.getElementById('rzp-button').onclick = function(e) {
+            var options = {
+                "key": "rzp_test_tV8hhS0olbbfGd", // Enter the Key ID generated from the Dashboard
+                "amount": "99900", // Amount is in currency subunits. Default currency is INR. Hence, 99900 refers to 99900 paise or Rs 999.
+                "currency": "INR",
+                "name": "Eagle Study",
+                "description": "Pay amount for 3 month subscription",
+                "image": "https://example.com/your_logo",
+                "order_id": "{{ payment_order_id }}", // This is a sample Order ID. Pass the `id` obtained in the previous step.
+                "handler": function (response){
+                    var form = document.createElement('form');
+                    form.method = 'POST';
+                    form.action = '/verify_payment';
+
+                    var razorpay_payment_id = document.createElement('input');
+                    razorpay_payment_id.type = 'hidden';
+                    razorpay_payment_id.name = 'razorpay_payment_id';
+                    razorpay_payment_id.value = response.razorpay_payment_id;
+                    form.appendChild(razorpay_payment_id);
+
+                    var razorpay_order_id = document.createElement('input');
+                    razorpay_order_id.type = 'hidden';
+                    razorpay_order_id.name = 'razorpay_order_id';
+                    razorpay_order_id.value = response.razorpay_order_id;
+                    form.appendChild(razorpay_order_id);
+
+                    var razorpay_signature = document.createElement('input');
+                    razorpay_signature.type = 'hidden';
+                    razorpay_signature.name = 'razorpay_signature';
+                    razorpay_signature.value = response.razorpay_signature;
+                    form.appendChild(razorpay_signature);
+
+                    document.body.appendChild(form);
+                    form.submit();
+                },
+                "theme": {
+                    "color": "#3399cc"
+                }
+            };
+            var rzp1 = new Razorpay(options);
+            rzp1.open();
+            e.preventDefault();
+        }
+    </script>
+</body>
+</html>

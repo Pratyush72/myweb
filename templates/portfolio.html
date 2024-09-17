@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+{%block content%}
+
+<!--=============== MAIN ===============-->
+<main class="main">
+    <!--=============== HOME ===============-->
+    <section class="home section" id="home">
+        <div class="home__container container grid">
+            <div class="home__data">
+                <h1 class="home__title">Hello, I'm Pratyush</h1>
+                <h3 class="home__subtitle">Web Developer</h3>
+                <p class="home__description">I create web applications with the latest technology and design trends.</p>
+                <a href="#contact" class="button">Contact Me</a>
+            </div>
+            <div class="home__img">
+                <img src="/static/image/portfolio/pratyush.jpeg" alt="Profile Image">
+            </div>
+        </div>
+    </section>
+
+    <!--=============== ABOUT ===============-->
+    <section class="about section" id="about">
+        <h2 class="section__title">About Me</h2>
+        <div class="about__container container grid">
+            <div class="about__data">
+                <p class="about__description">My name is Pratyush Chaubey, and I hail from the
+                     culturally rich state of Bihar. Currently, I reside in the vibrant city of
+                      Noida. I have successfully completed my 10th, 12th, and most recently, 
+                      my graduation in 2024. My journey has been marked by a strong passion 
+                      for technology and sports. I enjoy typing coding, and playing cricket,
+                       which not only enhance my technical skills but also keep me physically active and disciplined. 
+                       I look forward to leveraging my education and hobbies to create a dynamic and fulfilling career.</p>
+                <div class="about__info">
+                    <div>
+                        <span class="about__info-title">01+</span>
+                        <span class="about__info-name">Years <br> experience</span>
+                    </div>
+                    <div>
+                        <span class="about__info-title">05+</span>
+                        <span class="about__info-name">Completed<br> projects</span>
+                    </div>
+                    <div>
+                        <span class="about__info-title">20+</span>
+                        <span class="about__info-name">Responsive<br>Clone</span>
+                    </div>
+                </div>
+                <a href="/static/image/portfolio/pratyush.pdf" class="button" download>Download CV</a>
+            </div>
+            <img src="/static/image/portfolio/about.png" alt="" class="about__img">
+        </div>
+    </section>
+
+    <!--=============== SKILLS ===============-->
+    <section class="skills section" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <div class="skills__container container grid">
+            <div class="skills__content">
+                <h3 class="skills__title">Frontend</h3>
+                <div class="skills__box">
+                    <div class="skills__group">
+                        <div class="skills__data">
+                            <i class='bx bx-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">HTML</h3>
+                                <span class="skills__level">Advanced</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <i class='bx bx-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">CSS</h3>
+                                <span class="skills__level">Advanced</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills__group">
+                        <div class="skills__data">
+                            <i class='bx bx-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">JavaScript</h3>
+                                <span class="skills__level">Intermediate</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <i class='bx bx-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">React</h3>
+                                <span class="skills__level">Intermediate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills__content">
+                <h3 class="skills__title">Backend</h3>
+                <div class="skills__box">
+                    <div class="skills__group">
+                        <div class="skills__data">
+                            <i class='bx bx-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">Node.js</h3>
+                                <span class="skills__level">Intermediate</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <i class='bx bx-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">Python</h3>
+                                <span class="skills__level">Advanced</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills__group">
+                        <div class="skills__data">
+                            <i class='bx bx-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">SQL</h3>
+                                <span class="skills__level">Advanced</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <i class='bx bx-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">Flask</h3>
+                                <span class="skills__level">Intermediate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--=============== SERVICES ===============-->
+    <section class="services section" id="services">
+        <h2 class="section__title">Services</h2>
+        <div class="services__container container grid">
+            <div class="services__card">
+                <h3 class="services__title">Web Development</h3>
+                <p class="services__description">Creating responsive and functional websites.</p>
+            </div>
+            <div class="services__card">
+                <h3 class="services__title">UI/UX Design</h3>
+                <p class="services__description">Designing user-friendly interfaces and experiences.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!--=============== WORK ===============-->
+    <section class="work section" id="work">
+        <h2 class="section__title">Recent Work</h2>
+        <div class="work__container container grid">
+            <div class="work__card mix web">
+                <img src="/static/image/portfolio/shoping.png" alt="" class="work__img">
+                <div class="work__data">
+                    <h3 class="work__title">Shopping website</h3>
+                    <p class="work__description">Unlock premium shopping experiences on our responsive website.
+                         Elevate your shopping journey with exclusive access, tailored just for you.
+                    </p>
+                </div>
+            </div>
+            <div class="work__card mix app">
+                <img src="/static/image/portfolio/wine.png" alt="" class="work__img">
+                <div class="work__data">
+                    <h3 class="work__title">Wine Clone</h3>
+                    <p class="work__description">
+                        Indulge in the world of fine wines with our free clone website. </p>
+                </div>
+            </div>
+            <div class="work__card mix design">
+                <img src="/static/image/portfolio/youtube.png" alt="" class="work__img">
+                <div class="work__data">
+                    <h3 class="work__title">Youtube Clone</h3>
+                    <p class="work__description">Experience the magic of video sharing with our free YouTube clone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--=============== TESTIMONIALS ===============-->
+    <section class="testimonial section" id="testimonial">
+        <h2 class="section__title">OWNER & CEO</h2>
+        <div class="testimonial__container container swiper-container">
+            <div class="swiper-wrapper">
+                <div class="testimonial__card swiper-slide">
+                    <img src="/static/image/portfolio/pratyush.jpeg" alt="" class="testimonial__img">
+                    <h3 class="testimonial__name">PRATYUSH</h3>
+                    <p class="testimonial__description">"I am owner & ceo of this Website "</p>
+                </div>
+                
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!--=============== CONTACT ===============-->
+    <section class="contact section" id="contact">
+        <h2 class="section__title">Contact Me</h2>
+        <div class="contact__container container grid">
+            <div class="contact__content">
+                <h3 class="contact__title">Talk to me</h3>
+                <div class="contact__info">
+                    <div class="contact__card">
+                        <i class='bx bx-mail-send contact__card-icon'></i>
+                        <h3 class="contact__card-title">Email</h3>
+                        <span class="contact__card-data">pratyush2chaubey@gmail.com</span>
+                    </div>
+                    <div class="contact__card">
+                        <i class='bx bx-phone contact__card-icon'></i>
+                        <h3 class="contact__card-title">Phone</h3>
+                        <span class="contact__card-data">+91 72568 10818</span>
+                    </div>
+                </div>
+            </div>
+            <form action="{{ url_for('contact') }}" method="POST" class="contact__form">
+                <div class="contact__form-div">
+                    <label for="name" class="contact__form-tag">Name</label>
+                    <input type="text" name="name" id="name" class="contact__form-input" placeholder="Insert your name">
+                </div>
+                <div class="contact__form-div">
+                    <label for="email" class="contact__form-tag">Email</label>
+                    <input type="email" name="email" id="email" class="contact__form-input" placeholder="Insert your email">
+                </div>
+                <div class="contact__form-div contact__form-area">
+                    <label for="message" class="contact__form-tag">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10" class="contact__form-input" placeholder="Write your message"></textarea>
+                </div>
+                <button class="button">Send Message</button>
+            </form>            
+        </div>
+    </section>
+</main>
+
+{% endblock %}

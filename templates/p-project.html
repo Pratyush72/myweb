@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{%block content%}
+
+
+<style>
+    .flash-success {
+        color: green;
+    }
+    .flash-error {
+        color: red;
+    }
+    .flash-messages{
+        margin-top: 20px;
+        font-weight: 800;
+    }
+</style>
+
+<!-- JavaScript to hide flash messages after 2 seconds -->
+<script>
+    setTimeout(function() {
+        const flashMessages = document.querySelector('.flash-messages');
+        if (flashMessages) {
+            flashMessages.style.display = 'none';
+        }
+    }, 2000); // 2000 milliseconds = 2 seconds
+</script>
+</body>
+
+<div class="subscription-container">
+    <h1>Subscribe to Download Paid Projects</h1>
+
+    <!-- Flash messages section -->
+ {% with messages = get_flashed_messages(with_categories=true) %}
+ {% if messages %}
+     <div class="flash-messages">
+         {% for category, message in messages %}
+             <div class="flash-{{ category }}">{{ message }}</div>
+         {% endfor %}
+     </div>
+ {% endif %}
+ {% endwith %}
+   
+    <form action="/pay" method="post">
+    <!-- <button class="free-subscribe-button" id="subscribe-button">Subscribe</button> -->
+    </form>
+      
+    <button class="free-unsubscribe-button" id="unsubscribe-button">Unsubscribe</button>
+     <div class="status">
+    <p class="subscription-status">Subscription status: <span id="subscription-status">Not Subscribed</span></p>
+    <p class="subscription-days">Days remaining: <span id="subscription-days">0</span></p>
+  </div>
+</div>
+
+<div class="free-card-container">
+    <div class="free-card">
+        <img src="/static/project2.jpg" alt="Project 1" class="free-card-image">
+        <div class="free-card-content">
+            <h1 class="free-card-title">AVAILABLE SOON</h1>
+            <marquee direction="left"><section class="content">
+               <h2>PROJECT AVAILABLE SOON WITH BACKEND</h2>
+            </marquee>
+            <!-- <p class="free-card-description">Description of Project 1.</p> -->
+            <a href="/static/project1.zip" class="free-download-link" download="project1.zip">
+                <!-- <button class="free-download-button" data-project="Project 1">Download</button> -->
+            </a>
+        </div>
+    </div>
+    <!-- <div class="free-card">
+        <img src="/static/project2.jpg " alt="Project 2" class="free-card-image">
+        <div class="free-card-content">
+            <h3 class="free-card-title">Project 2</h3>
+            <p class="free-card-description">Description of Project 2.</p>
+            <a href="/static/project1.zip" class="free-download-link" download="project2.zip">
+                <button class="free-download-button" data-project="Project 2">Download</button>
+            </a>
+        </div>
+    </div> -->
+    <!-- Add more project cards as needed -->
+</div>
+
+<button class="free-show-downloads-button" id="show-downloads-button">Show My Downloads</button>
+<button class="free-reset-downloads-button" id="reset-downloads-button">Reset Downloads</button>
+
+<div class="free-my-downloads">
+    <h2>My Downloads</h2>
+    <ul id="download-list"></ul>
+</div>
+
+<div id="flash-message" class="flash-message" style="display: none;"></div>
+
+
+{% endblock %}

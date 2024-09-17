@@ -1,0 +1,553 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero">
+    <marquee direction="left"><section class="content">
+        {% if username %}
+        <h2>Hello, {{ username }}!</h2>
+        <h2>WELCOME TO OUR WEBSITE</h2>
+        {% else %}
+        <h2>WELCOME TO OUR WEBSITE</h2>
+        {% endif %}
+    </section></marquee>
+</section>
+<!-- <section class="content">
+    {% if username %}
+    <h2>Hello, {{ username }}!</h2>
+    {% else %}
+    <h2>About Us</h2>
+    <p>Some content goes here...</p>
+    {% endif %}
+</section> -->
+
+<!-- Categories Start -->
+<div class="container-xxl py-5 category">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center px-3">Categories</h6>
+            <h1 class="mb-5" style="color: #fb873f;">Popular Topics to Explore</h1>
+        </div>
+        <div class="row g-2 m-2">
+            <div class="col-lg-3 col-md-6  text-center">
+                <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
+
+                    <img src="/static/img/cat1.png" class="img-fluid" alt="categories"></i>
+
+                    <h5 class="my-2">
+                        <a href="https://www.geeksforgeeks.org/introduction-to-ms-excel/#:~:text=as%20a%20cell-,reference,-." class="text-center">Microsoft Excel</a>
+                    </h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6  text-center">
+                <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
+
+                    <img src="/static/img/cat2.png" class="img-fluid" alt="categories"></i>
+
+                    <h5 class="my-2">
+                        <a href="https://aws.amazon.com/free/?gclid=Cj0KCQjw2ou2BhCCARIsANAwM2Fl07mmS30KdatroL5rLJjlHmf2eLvPe4ip1UCkU-hRqk_nzP_OqcwaAgSbEALw_wcB&trk=2738afd4-9401-4d18-8e3e-1b1c194dea07&sc_channel=ps&ef_id=Cj0KCQjw2ou2BhCCARIsANAwM2Fl07mmS30KdatroL5rLJjlHmf2eLvPe4ip1UCkU-hRqk_nzP_OqcwaAgSbEALw_wcB:G:s&s_kwcid=AL!4422!3!509606977839!p!!g!!aws!12618685604!120373368136&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all#:~:text=Total%20results%3A%20131-,COMPUTE,-Free%20Tier" class="text-center"> AWS</a>
+                    </h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6  text-center">
+                <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
+
+                    <img src="/static/img/cat3.png" class="img-fluid" alt="categories"></i>
+
+                    <h5 class="my-2">
+                        <a href="https://www.w3schools.com/python/default.asp#:~:text=Python%20Certificate-,Python,-Tutorial" class="text-center">Python</a>
+                    </h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6  text-center">
+                <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
+
+                    <img src="/static/img/cat4.png" class="img-fluid" alt="categories"></i>
+
+                    <h5 class="my-2">
+                        <a href="https://azure.microsoft.com/en-in/resources/cloud-computing-dictionary/what-is-java-programming-language#:~:text=Java%20%7C%20Microsoft%20Azure.-,What,-is%20Java%3F" class="text-center">Java</a>
+                    </h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6  text-center">
+                <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
+
+                    <img src="/static/img/cat5.png" class="img-fluid" alt="categories"></i>
+
+                    <h5 class="my-2">
+                        <a href="https://www.geeksforgeeks.org/web-design/" class="text-center">Web Design</a>
+                    </h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6  text-center">
+                <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
+
+                    <img src="/static/img/cat6.png" class="img-fluid" alt="categories"></i>
+
+                    <h5 class="my-2">
+                        <a href="https://www.geeksforgeeks.org/web-development/" class="text-center">Web Development</a>
+                    </h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6  text-center">
+                <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
+
+                    <img src="/static/img/cat7.png" class="img-fluid" alt="categories"></i>
+
+                    <h5 class="my-2">
+                        <a href="https://www.w3schools.com/MySQL/default.asp" class="text-center">MySQL</a>
+                    </h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6  text-center">
+                <div class="content shadow p-3 mb-2 wow fadeInUp" data-wow-delay="0.3s">
+
+                    <img src="/static/img/cat8.png" class="img-fluid" alt="categories"></i>
+
+                    <h5 class="my-2">
+                        <a href="https://careerfoundry.com/en/blog/ux-design/the-difference-between-ux-and-ui-design-a-laymans-guide/" class="text-center">UI/UX Design</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Categories End -->
+
+<!-- Courses Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center px-3">Popular Courses</h6>
+            <h1 class="mb-5" style="color: #fb873f;">Explore new and trending free online courses</h1>
+        </div>
+        <div class="row g-4 py-2">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item shadow">
+                    <div class="position-relative overflow-hidden text-light image">
+                        <img class="img-fluid" src="/static/img/course-1.jpg" alt="">
+                        <!-- <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#fb873f;"
+                            class="px-2 py-1 fw-bold text-uppercase">FREE</div> -->
+
+                    </div>
+                    <div class="p-2 pb-0">
+
+                        <h5 class="mb-1"><a href="single.html" class="text-dark">HTML Course for Beginners </a></h5>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
+                            4.55</small>
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>5.8L+
+                            Learners
+                        </small>
+                        <small class="flex-fill text-center py-1 px-2"><i
+                                class="fa fa-user me-2"></i>Beginner</small>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>2.0
+                            Hrs</small>
+                        <small class="py-1 px-2 fw-bold fs-6 text-center">₹ 0</small>
+                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Enroll
+                                Now </a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item shadow">
+                    <div class="position-relative overflow-hidden text-light image">
+                        <img class="img-fluid" src="/static/img/course-2.jpg" alt="">
+                        <!-- <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#0ed44c;"
+                            class="px-2 py-1 fw-bold text-uppercase">PAID</div> -->
+
+                    </div>
+                    <div class="p-2 pb-0">
+
+                        <h5 class="mb-1">Front End Development-CSS
+                        </h5>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
+                            4.55</small>
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>5.2L+
+                            Learners
+                        </small>
+                        <small class="flex-fill text-center py-1 px-2"><i
+                                class="fa fa-user me-2"></i>Beginner</small>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>4.0
+                            Hrs</small>
+                        <small class="py-1 px-2 fw-bold fs-6 text-center">₹ 199</small>
+                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Enroll
+                                Now </a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item shadow">
+                    <div class="position-relative overflow-hidden text-light image">
+                        <img class="img-fluid" src="/static/img/course-3.jpg" alt="">
+                        <!-- <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#fb873f;"
+                            class="px-2 py-1 fw-bold text-uppercase">FREE</div> -->
+
+                    </div>
+                    <div class="p-2 pb-0">
+
+                        <h5 class="mb-1">Introduction to JavaScript
+                        </h5>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
+                            4.46</small>
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>76L+
+                            Learners
+                        </small>
+                        <small class="flex-fill text-center py-1 px-2"><i
+                                class="fa fa-user me-2"></i>Beginner</small>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>2.5
+                            Hrs</small>
+                        <small class="py-1 px-2 fw-bold fs-6 text-center">₹ 0</small>
+                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Enroll
+                                Now </a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item shadow">
+                    <div class="position-relative overflow-hidden text-light image">
+                        <img class="img-fluid" src="/static/img/course-4.jpg" alt="">
+                        <!-- <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#0ed44c;"
+                            class="px-2 py-1 fw-bold text-uppercase">PAID</div> -->
+
+                    </div>
+                    <div class="p-2 pb-0">
+
+                        <h5 class="mb-1">Python Programming
+                        </h5>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
+                            3.54</small>
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>3.3L+
+                            Learners
+                        </small>
+                        <small class="flex-fill text-center py-1 px-2"><i
+                                class="fa fa-user me-2"></i>Beginner</small>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>3.0
+                            Hrs</small>
+                        <small class="py-1 px-2 fw-bold fs-6 text-center">₹ 299</small>
+                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Enroll
+                                Now </a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item shadow">
+                    <div class="position-relative overflow-hidden text-light image">
+                        <img class="img-fluid" src="/static/img/course-5.jpg" alt="">
+                        <!-- <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#fb873f;"
+                            class="px-2 py-1 fw-bold text-uppercase">FREE</div> -->
+
+                    </div>
+                    <div class="p-2 pb-0">
+
+                        <h5 class="mb-1">SQL for Data Science
+                        </h5>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-center py-1 px-1"><i class="fa fa-star text-warning me-2"></i>
+                            4.54</small>
+                        <small class="flex-fill text-center py-1 px-1"><i class="fa fa-user-graduate me-2"></i>1.3L+
+                            Learners
+                        </small>
+                        <small class="flex-fill text-center py-1 px-1"><i
+                                class="fa fa-user me-2"></i>Intermediate</small>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>5.0
+                            Hrs</small>
+                        <small class="py-1 px-2 fw-bold fs-6 text-center">₹ 0</small>
+                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Enroll
+                                Now </a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item shadow">
+                    <div class="position-relative overflow-hidden text-light image">
+                        <img class="img-fluid" src="/static/img/course-6.jpg" alt="">
+                        <!-- <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#fb873f;"
+                            class="px-2 py-1 fw-bold text-uppercase">FREE</div> -->
+
+                    </div>
+                    <div class="p-2 pb-0">
+
+                        <h5 class="mb-1">ChatGPT for Beginners
+                        </h5>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
+                            3.55</small>
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>3.5L+
+                            Learners
+                        </small>
+                        <small class="flex-fill text-center py-1 px-2"><i
+                                class="fa fa-user me-2"></i>Beginner</small>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>4.5
+                            Hrs</small>
+                        <small class="py-1 px-2 fw-bold fs-6 text-center">₹ 0</small>
+                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Enroll
+                                Now </a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item shadow">
+                    <div class="position-relative overflow-hidden text-light image">
+                        <img class="img-fluid" src="/static/img/course-7.jpg" alt="">
+                        <!-- <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#fb873f;"
+                            class="px-2 py-1 fw-bold text-uppercase">FREE</div> -->
+
+                    </div>
+                    <div class="p-2 pb-0">
+
+                        <h5 class="mb-1">AWS for Beginners
+                        </h5>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
+                            4.53</small>
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>1L+
+                            Learners
+                        </small>
+                        <small class="flex-fill text-center py-1 px-2"><i
+                                class="fa fa-user me-2"></i>Beginner</small>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>3.0
+                            Hrs</small>
+                        <small class="py-1 px-2 fw-bold fs-6 text-center">₹ 0</small>
+                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Enroll
+                                Now </a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item shadow">
+                    <div class="position-relative overflow-hidden text-light image">
+                        <img class="img-fluid" src="/static/img/course-8.jpg" alt="">
+                        <!-- <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#0ed44c;"
+                            class="px-2 py-1 fw-bold text-uppercase">PAID</div> -->
+
+                    </div>
+                    <div class="p-2 pb-0">
+
+                        <h5 class="mb-1">Microsoft Azure Essentials
+                        </h5>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-center py-1 px-1"><i class="fa fa-star text-warning me-2"></i>
+                            4.64</small>
+                        <small class="flex-fill text-center py-1 px-1"><i class="fa fa-user-graduate me-2"></i>4.4L+
+                            Learners
+                        </small>
+                        <small class="flex-fill text-center py-1 px-1"><i
+                                class="fa fa-user me-2"></i>Intermediate</small>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>3.5
+                            Hrs</small>
+                        <small class="py-1 px-2 fw-bold fs-6 text-center">₹ 149</small>
+                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Enroll
+                                Now </a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item shadow">
+                    <div class="position-relative overflow-hidden text-light image">
+                        <img class="img-fluid" src="/static/img/course-9.jpg" alt="">
+                        <!-- <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#fb873f;"
+                            class="px-2 py-1 fw-bold text-uppercase">FREE</div> -->
+
+                    </div>
+                    <div class="p-2 pb-0">
+
+                        <h5 class="mb-1">Introduction to MS Excel</h5>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
+                            4.6</small>
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>4.2L+
+                            Learners
+                        </small>
+                        <small class="flex-fill text-center py-1 px-2"><i
+                                class="fa fa-user me-2"></i>Beginner</small>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>3.5
+                            Hrs</small>
+                        <small class="py-1 px-2 fw-bold fs-6 text-center">₹ 0</small>
+                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Enroll
+                                Now </a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item shadow">
+                    <div class="position-relative overflow-hidden text-light image">
+                        <img class="img-fluid" src="/static/img/course-10.jpg" alt="">
+                        <!-- <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#0ed44c;"
+                            class="px-2 py-1 fw-bold text-uppercase">PAID</div> -->
+
+                    </div>
+                    <div class="p-2 pb-0">
+
+                        <h5 class="mb-1">Statistics For Data Science
+                        
+                            
+                        </h5>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-center py-1 px-1"><i class="fa fa-star text-warning me-2"></i>
+                            4.55</small>
+                        <small class="flex-fill text-center py-1 px-1"><i class="fa fa-user-graduate me-2"></i>5.3L+
+                            Learners
+                        </small>
+                        <small class="flex-fill text-center py-1 px-1"><i
+                                class="fa fa-user me-2"></i>Intermediate</small>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>2.5
+                            Hrs</small>
+                        <small class="py-1 px-2 fw-bold fs-6 text-center">₹ 299</small>
+                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Enroll
+                                Now </a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item shadow">
+                    <div class="position-relative overflow-hidden text-light image">
+                        <img class="img-fluid" src="/static/img/course-11.jpg" alt="">
+                        <!-- <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#fb873f;"
+                            class="px-2 py-1 fw-bold text-uppercase">FREE</div> -->
+
+                    </div>
+                    <div class="p-2 pb-0">
+
+                        <h5 class="mb-1">Java Programming
+                        </h5>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
+                            4.45</small>
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>5L+
+                            Learners
+                        </small>
+                        <small class="flex-fill text-center py-1 px-2"><i
+                                class="fa fa-user me-2"></i>Beginner</small>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>2.0
+                            Hrs</small>
+                        <small class="py-1 px-2 fw-bold fs-6 text-center">₹ 0</small>
+                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Enroll
+                                Now </a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="course-item shadow">
+                    <div class="position-relative overflow-hidden text-light image">
+                        <img class="img-fluid" src="/static/img/course-12.png" alt="">
+                        <!-- <div style="position:absolute;top: 15px;left: 16px; font-size:12px; border-radius:3px; background-color:#fb873f;"
+                            class="px-2 py-1 fw-bold text-uppercase">FREE</div> -->
+
+                    </div>
+                    <div class="p-2 pb-0">
+
+                        <h5 class="mb-1">C for Beginners
+                        </h5>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-star text-warning me-2"></i>
+                            4.5</small>
+                        <small class="flex-fill text-center py-1 px-2"><i class="fa fa-user-graduate me-2"></i>1.1L+
+                            Learners
+                        </small>
+                        <small class="flex-fill text-center py-1 px-2"><i
+                                class="fa fa-user me-2"></i>Beginner</small>
+                    </div>
+                    <div class="d-flex">
+                        <small class="flex-fill text-left p-2 px-2"><i class="fa fa-clock me-2"></i>1.5
+                            Hrs</small>
+                        <small class="py-1 px-2 fw-bold fs-6 text-center">₹ 0</small>
+                        <small class=" text-primary py-1 px-2 fw-bold fs-6" style="float:right;"><a href="#">Enroll
+                                Now </a><i class="fa fa-chevron-right me-2 fs-10"></i></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ---------social links---------------- -->
+
+<div class="shadow p-3 mb-5 bg-body rounded">
+    <div class="social-links">
+      <a href="https://github.com/Pratyush72" class="github" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/pratyush-chaubey-8ab289188?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://codepen.io/@Pratyush-Chaubey" class="codepen" target="_blank" title="CodePen">
+          <i class="fab fa-codepen"></i>
+      </a>
+      <a href="https://youtube.com/@softwareengineer72?si=F3gDnC4YcdVmOuJs  " class="youtube" target="_blank" title="YouTube">
+          <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.instagram.com/pratyush_72" class="instagram" target="_blank" title="Instagram">
+          <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <!-- -------------show downloded------------ -->
+     
+    <div class="downlodad-main">
+      <div class="download-show">
+        <div class="download-show-item">
+            <h2>15+</h2>
+            <p>Project</p>
+        </div>
+        <div class="download-show-item">
+            <h2>5+</h2>
+            <p>Paid Project</p>
+        </div>
+        <div class="download-show-item">
+            <h2 id="reachCount">10+</h2>
+            <p>Reach</p>
+        </div>
+        <div class="download-show-item">
+            <h2>15+</h2>
+            <p>Interview</p>
+        </div>
+      </div>
+      </div>
+    
+    
+
+{% endblock %}
